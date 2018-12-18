@@ -31,7 +31,7 @@ The code should pre-trained the classifier first.Our experiment results:
 | Training | 1.0 | 0.96875 |
 | Testing | 0.9375 | 0.90625 |
 
-## Train the model using this command:
+## Test the model using this command:
 
 If you finish trained your model.You can test your model results by:
 
