@@ -1,5 +1,8 @@
 # Spectrogram Analysiti via self-Attention for Realizing Cross-Model Visual-Audio Generation
 
+This repository contains code accompanying the paper [SPECTROGRAM ANALYSIS VIA SELF-ATTENTION FOR REALIZING CROSS-MODEL
+VISUAL-AUDIO GENERATION](https://ieeexplore.ieee.org/document/9052918).
+
 Requires TensorFlow>=1.4 and tested with Python 3.5+.
 
 ## Preparation of dataset
