@@ -22,7 +22,6 @@ else:
         return tf.concat(tensors, axis, *args, **kwargs)
 
 
-# 本函数在于处理batch normalize,可精简化代码
 def bn(x, is_training, scope):
     return tf_contrib.layers.batch_norm(x,
                                         decay=0.9,
@@ -37,7 +36,6 @@ def conv_out_size_same(size, stride):
     return int(math.ceil(float(size) / float(stride)))
 
 
-# 用于经数据样本和标签拼接在一起
 def conv_cond_concat(x, y):
     """Concatenate conditioning vector on feature map axis."""
     x_shapes = x.get_shape()
@@ -45,24 +43,19 @@ def conv_cond_concat(x, y):
     return concat([x, y * tf.ones([x_shapes[0], x_shapes[1], x_shapes[2], y_shapes[3]])], 3)
 
 
-# 本函数在于卷积网络的conv
 def conv2d(input_, output_dim, k_h=5, k_w=5, d_h=2, d_w=2, name="conv2d", use_bias=False, sn=False):
     with tf.variable_scope(name):
-        # input_.get_shape()[-1]返回输入的图像通道数，mnist的图像通道数为1，w记录的是filter
         w = tf.get_variable('w', [k_h, k_w, input_.get_shape()[-1], output_dim], initializer=weight_init)
-        # 此处可以参考DCGAN，filter加上步长处理
         if sn:
             conv = tf.nn.conv2d(input_, filter=spectral_norm(w), strides=[1, d_h, d_w, 1], padding='SAME')
         else:
             conv = tf.nn.conv2d(input_, filter=w, strides=[1, d_h, d_w, 1], padding='SAME')
-        # 将conv加上偏值处理
         if use_bias:
             biases = tf.get_variable('biases', [output_dim], initializer=tf.constant_initializer(0.0))
             conv = tf.reshape(tf.nn.bias_add(conv, biases), conv.get_shape())
         return conv
 
 
-# 本函数在于卷积网络的deconv
 def deconv2d(input_, output_shape, k_h=5, k_w=5, d_h=2, d_w=2, name="deconv2d", with_w=False, use_bias=False, sn=False):
     with tf.variable_scope(name):
         # filter : [height, width, output_channels, in_channels]
@@ -87,7 +80,6 @@ def deconv2d(input_, output_shape, k_h=5, k_w=5, d_h=2, d_w=2, name="deconv2d", 
             return deconv
 
 
-# 本函数在激活函数的设计上有别于单纯的relu，在小于0的部分用了减小比例的处理，比较像ELU
 def lrelu(x, leak=0.2, name="lrelu"):
     return tf.maximum(x, leak * x)
 
@@ -96,7 +88,6 @@ def hw_flatten(x):
     return tf.reshape(x, shape=[x.shape[0], -1, x.shape[-1]])
 
 
-# 本函数在于对数据做形状上的改变，只是在线性条件下完成的
 def linear(input_, output_size, scope=None, with_w=False, sn=False):
     shape = input_.get_shape().as_list()
 

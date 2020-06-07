@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7b1a0777-37fe-4867-a2a8-e9c50f3572de" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ops.py" beforeDir="false" afterPath="$PROJECT_DIR$/ops.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +24,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
@@ -32,6 +32,15 @@
                 <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ops.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1575">
+              <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
             </state>
           </provider>
         </entry>
@@ -45,6 +54,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/ops.py" />
       </list>
     </option>
   </component>
@@ -100,12 +110,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1591520034729</updated>
-      <workItem from="1591520035993" duration="340000" />
+      <workItem from="1591520035993" duration="494000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="340000" />
+    <option name="totallyTimeSpent" value="494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -166,6 +176,13 @@
             <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ops.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1575">
+          <caret line="89" lean-forward="true" selection-start-line="89" selection-end-line="89" />
         </state>
       </provider>
     </entry>
