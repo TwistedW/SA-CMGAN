@@ -2,8 +2,8 @@
 import os
 
 ## GAN Variants
-from SA_CMAV_I2S import I2S
-from SA_CMAV_S2I import S2I
+from SA_CMGAN_I2S import I2S
+from SA_CMGAN_S2I import S2I
 
 from utils import show_all_variables
 from utils import check_folder
